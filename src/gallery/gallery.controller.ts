@@ -70,7 +70,7 @@ export class GalleryController {
   ): any {
     const fileName = file?.filename;
     if (!fileName) return of({ error: 'File must be an image' });
-    const imageFolderPath = join(process.cwd(), 'uploads/images');
+    const imageFolderPath = join(process.cwd(), 'src/uploads/images');
     const imageUrl = join(imageFolderPath + '/' + fileName);
     return imageUrl;
   }
